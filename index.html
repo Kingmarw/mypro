@@ -1,111 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeInUp {
-      animation: fadeInUp 0.8s ease forwards;
-    }
-    @keyframes borderRotate {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 200% 50%; }
-    }
-    .animated-border {
-      background-size: 200% 200%;
-      animation: borderRotate 3s linear infinite;
-    }
-  </style>
-</head>
-<body class="bg-black text-white font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen">
+    
+    <!-- Header -->
+    <header class="text-center py-10">
+      <h1 class="text-4xl font-bold tracking-widest">MY PROJECTS</h1>
+      <p class="text-gray-400 mt-2">A showcase of my latest work</p>
+    </header>
 
-  <!-- Hero -->
-  <section class="relative flex items-center justify-center h-64 bg-gradient-to-r from-purple-900 via-black to-purple-900 animate-pulse">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-500 tracking-wide animate-pulse">
-      🚀 My Projects
-    </h1>
-  </section>
-
-  <!-- Projects Grid -->
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Project Card -->
-      <div class="group relative overflow-hidden rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animated-border">
-        <div class="bg-black/90 rounded-2xl shadow-lg transform transition duration-500 hover:scale-105 animate-fadeInUp">
-          <div class="relative">
-            <img src="https://res.cloudinary.com/dpxl4aids/image/upload/v1757099866/IMG-20250829-WA0025_zkestm.jpg" 
-                 alt="Project 1" 
-                 class="w-full h-48 object-cover rounded-t-2xl transform transition duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <span class="text-lg font-semibold">🔍 See Details</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">Deaf Desktop App</h3>
-            <p class="text-gray-300 text-sm">Python Application for accessibility</p>
-            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-pink-400 transition-all">
-              View Project →
+    <!-- Projects Grid -->
+    <main class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card -->
+        <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:scale-105 transition transform duration-500">
+          <img src="https://source.unsplash.com/600x400/?tech,app" class="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition duration-500"/>
+          <div class="p-5">
+            <h2 class="text-xl font-semibold mb-2">Project Title</h2>
+            <p class="text-gray-400 text-sm">Short description about the project and its features.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-4 text-sm font-medium text-white group-hover:text-gray-300 transition">
+              View Project
+              <span class="w-8 h-8 flex items-center justify-center rounded-full border border-white/30 group-hover:translate-x-2 transition duration-500">➜</span>
             </a>
           </div>
         </div>
-      </div>
 
-      <!-- Project Card -->
-      <div class="group relative overflow-hidden rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animated-border">
-        <div class="bg-black/90 rounded-2xl shadow-lg transform transition duration-500 hover:scale-105 animate-fadeInUp">
-          <div class="relative">
-            <img src="https://res.cloudinary.com/dpxl4aids/image/upload/v1756903672/Screenshot_2025-07-05_015246_usltmq.png" 
-                 alt="Project 2" 
-                 class="w-full h-48 object-cover rounded-t-2xl transform transition duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <span class="text-lg font-semibold">⚡ Fast & Modern</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">School Management App</h3>
-            <p class="text-gray-300 text-sm">Flask + SQLite System</p>
-            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-pink-400 transition-all">
-              View Project →
+        <!-- Duplicate cards -->
+        <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:scale-105 transition transform duration-500">
+          <img src="https://source.unsplash.com/600x400/?website,design" class="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition duration-500"/>
+          <div class="p-5">
+            <h2 class="text-xl font-semibold mb-2">Another Project</h2>
+            <p class="text-gray-400 text-sm">Short description about the project and its features.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-4 text-sm font-medium text-white group-hover:text-gray-300 transition">
+              View Project
+              <span class="w-8 h-8 flex items-center justify-center rounded-full border border-white/30 group-hover:translate-x-2 transition duration-500">➜</span>
             </a>
           </div>
         </div>
-      </div>
 
-      <!-- Project Card -->
-      <div class="group relative overflow-hidden rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animated-border">
-        <div class="bg-black/90 rounded-2xl shadow-lg transform transition duration-500 hover:scale-105 animate-fadeInUp">
-          <div class="relative">
-            <img src="https://res.cloudinary.com/dpxl4aids/image/upload/v1756904102/%D9%A2%D9%A0%D9%A2%D9%A5%D9%A0%D9%A8%D9%A2%D9%A6_%D9%A0%D9%A2%D9%A3%D9%A7%D9%A1%D9%A1_ti5im3.png" 
-                 alt="Project 3" 
-                 class="w-full h-48 object-cover rounded-t-2xl transform transition duration-500 group-hover:scale-110">
-            <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-              <span class="text-lg font-semibold">🎮 Play Now</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors">2D Adventure Game</h3>
-            <p class="text-gray-300 text-sm">Scratch Indie Game</p>
-            <a href="#" target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-pink-400 transition-all">
-              View Project →
+        <div class="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:scale-105 transition transform duration-500">
+          <img src="https://source.unsplash.com/600x400/?game,code" class="w-full h-48 object-cover opacity-80 group-hover:opacity-100 transition duration-500"/>
+          <div class="p-5">
+            <h2 class="text-xl font-semibold mb-2">Cool Game</h2>
+            <p class="text-gray-400 text-sm">Short description about the project and its features.</p>
+            <a href="#" class="inline-flex items-center gap-2 mt-4 text-sm font-medium text-white group-hover:text-gray-300 transition">
+              View Project
+              <span class="w-8 h-8 flex items-center justify-center rounded-full border border-white/30 group-hover:translate-x-2 transition duration-500">➜</span>
             </a>
           </div>
         </div>
+
       </div>
+    </main>
 
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-400 border-t border-white/10">
-    © 2025 King Marw | All Rights Reserved
-  </footer>
-  
-</body>
+  </body>
 </html>
